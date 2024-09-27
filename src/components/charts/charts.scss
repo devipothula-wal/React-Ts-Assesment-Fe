@@ -1,0 +1,18 @@
+.chartsContainer {
+    width: auto !important;
+    max-height: 450px !important;
+
+    .barGraph {
+        height: 380px;
+        width: 100%;
+    }
+
+    .lineChart {
+        height: 380px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

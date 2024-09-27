@@ -6,7 +6,7 @@ import addNotification from '../utils/notification';
 // Get all transactions
 export const getTransactions = async () => {
     try {
-        const response = await axiosInstance.get(`/transaction/${localStorage.getItem('userId')}`);
+        const response = await axiosInstance.get(`/transaction`);
         return response?.data;
     }
     catch (err) {

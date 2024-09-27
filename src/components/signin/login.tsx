@@ -23,16 +23,18 @@ const Login: React.FC = () => {
     console.log('Username:', values.userName);
     console.log('Password:', values.password);
     const res = await loginApi(values);
-    console.log('res...', res);
+    console.log('res...', res?.data);
     if (res.success === true) {
       addNotification({
         type: "success",
         title: "Success",
         message: "Login Successfully!",
       });
+      
       localStorage.setItem('userName', values.userName)
       localStorage.setItem('password', values.password)
       localStorage.setItem('userId', res?.data?._id);
+      localStorage.setItem('token', res?.data?.token)
       navigate('/home')
     }
     else {

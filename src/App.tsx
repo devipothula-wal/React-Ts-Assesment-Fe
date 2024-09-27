@@ -47,7 +47,7 @@ function App() {
         isList={false}
         tableTitle='Transactions'
       />
-      {/* {transactionList?.length >= 1 && <DisplayTranCharts transactions={transactionList} />} */}
+      {transactionList?.length >= 1 && <DisplayTranCharts transactions={transactionList} />}
     </div>
   );
 }
