@@ -1,0 +1,31 @@
+.loginContainer {
+    margin-top: 50px;
+
+    .card {
+        min-width: 500px !important;
+        height: auto !important;
+
+        .card-body {
+            margin: 20px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+
+            .form-control {
+                min-width: 300px;
+            }
+
+            .cardTitle {
+                font-weight: bold;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+
+            .loginBut {
+                background-color: #154c79;
+            }
+
+        }
+    }
+}
