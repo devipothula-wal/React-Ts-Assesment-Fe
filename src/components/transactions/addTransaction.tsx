@@ -46,7 +46,6 @@ const AddTransaction: React.FC<addTransProps> = ({ isModalOpen, setIsModalOpen, 
         let res;
         if (_.get(values, '_id')) {
             const id = _.get(transaction, '_id')
-            console.log('id...', id)
             if (typeof id === 'string')
                 res = await updateTransaction(id, { ...values, userId: localStorage.getItem('userId') })
         }
@@ -63,14 +62,7 @@ const AddTransaction: React.FC<addTransProps> = ({ isModalOpen, setIsModalOpen, 
         resetForm();
     };
 
-    useEffect(() => {
-        if (transactionList?.length) {
-            console.log('...transaction list', transactionList);
-        }
-    }, [transactionList])
-
     const closeModal = () => {
-        console.log('RsetForm Is calling')
         setIsModalOpen(false);
     };
 

@@ -26,7 +26,6 @@ const TransactionList: React.FC<transListProps> = ({ transactionList, setTransac
         //used type guard here
         if (typeof id === 'string') {
             const res = await deleteTransaction(id);
-            console.log('res on delete ', res);
             if (res?.success === true) {
                 addNotification({
                     type: "success",
@@ -43,7 +42,6 @@ const TransactionList: React.FC<transListProps> = ({ transactionList, setTransac
 
     // Edit handler (this is just a placeholder, you'd implement edit functionality in detail)
     const handleEdit = (id?: string) => {
-        console.log('Editing transaction with ID:', id);
         const item = transactionList.find((item) => item?._id === id)
 
         if (isValidItem(item)) {

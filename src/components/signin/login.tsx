@@ -20,10 +20,7 @@ const Login: React.FC = () => {
 
   });
   const handleSubmit = async (values: login) => {
-    console.log('Username:', values.userName);
-    console.log('Password:', values.password);
     const res = await loginApi(values);
-    console.log('res...', res?.data);
     if (res.success === true) {
       addNotification({
         type: "success",

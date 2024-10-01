@@ -10,7 +10,6 @@ export const getTransactions = async () => {
         return response?.data;
     }
     catch (err) {
-        console.log('err in get api fe', err)
         addNotification({
             type: "danger",
             title: "Error",
@@ -30,7 +29,6 @@ export const createTransaction = async (transaction: Transaction) => {
         return response.data;
     }
     catch (err) {
-        console.log('err in create api fe', err)
         addNotification({
             type: "danger",
             title: "Error",
@@ -51,7 +49,6 @@ export const updateTransaction = async (id: string, transaction: Transaction) =>
         return response.data;
     }
     catch (err) {
-        console.log('FE err in update ', err)
         addNotification({
             type: "danger",
             title: "Error",
@@ -71,7 +68,6 @@ export const deleteTransaction = async (_id: string) => {
         return response.data;
     }
     catch (err) {
-        console.log('err in delete fe api', err)
         addNotification({
             type: "danger",
             title: "Error",

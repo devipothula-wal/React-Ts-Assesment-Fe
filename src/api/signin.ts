@@ -11,7 +11,6 @@ export const createUser = async (user: signUp) => {
         return response.data;
     }
     catch (err) {
-        console.log('err in create user api fe', err)
         addNotification({
             type: "danger",
             title: "Error",
@@ -32,7 +31,6 @@ export const loginApi = async (user: login) => {
         return response.data;
     }
     catch (err:any) {
-        console.log('err login api fe', err.response.data.message)
         addNotification({
             type: "danger",
             title: "Error",

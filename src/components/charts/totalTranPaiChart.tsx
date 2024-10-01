@@ -37,7 +37,6 @@ const PieChart: React.FC<ChartProps> = ({ transactions }) => {
 
             const backgroundColors = categories.map(() => getRandomColor());
 
-            console.log('background colors', backgroundColors)
             const myData: ChartData<'pie'> = {
                 labels: categories,
                 datasets: [

@@ -24,7 +24,6 @@ const SignUp: React.FC = () => {
             .max(9999999999, 'Phone number cannot be more than 10 digits'),
     });
     const handleSubmit = async (values: signUp) => {
-        console.log('values on submission of signup', values);
         const res = await createUser(values);
         if (res?.success === true) {
             addNotification({
