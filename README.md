@@ -56,6 +56,9 @@ src/
 |-- package.json  #meta data related to project and package dependies list
 |-- tsconfig.json #contains the typescript config details
 ```
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/license/MIT).
 
 
 
